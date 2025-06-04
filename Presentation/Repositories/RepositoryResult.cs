@@ -1,0 +1,13 @@
+﻿namespace Presentation.Repositories;
+
+public class RepositoryResult
+{
+    public bool Success { get; set; }
+    public string? Error { get; set; }
+    public int StatusCode { get; set; } 
+}
+
+public class RepositoryResult<T> : RepositoryResult
+{
+    public T? Result { get; set; }
+}
